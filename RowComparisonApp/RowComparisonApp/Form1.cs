@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
 using System.Windows.Forms;
 
@@ -40,7 +41,8 @@ namespace RowComparisonApp
 
         private void CompareButton_Click(object sender, EventArgs e)
         {
-
+            var comparer = new Comparer(CompareFilePathTextBox.Text);
+            comparer.Run();
         }
     }
 }
